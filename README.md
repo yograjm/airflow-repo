@@ -63,7 +63,7 @@
 
     `SELECT COUNT(*) FROM loans_data;`
 
-    Use `\d` to quit.
+    Use `\q` to quit.
 
 - On Codespace, create a Python script, `process_data.py`, to add data to `storedb` from the csv file
   - Load date from the csv file
@@ -76,7 +76,9 @@
 
     `mkdir -p ./dags ./logs ./plugins ./config`
 
-    Add `.py` files to `./dags` folder
+    Add `processing_data.py` file to `./dags` folder
+
+    Create `append_data_to_db_pipeline.py` file in `./dags` folder
 
     `echo -e "AIRFLOW_UID=$(id -u)" > .env`
 
@@ -86,7 +88,9 @@
 
   - UI running
   - DAG creating
-  - Pipeline execution success - data appending to the DB
-  - Stop Airflow: `docker compose down --volumes --rmi all`
+  - Pipeline execution success -- data appending to the DB
+  - Stop Airflow: 
+  
+    `docker compose down --volumes --rmi all`
 
 
